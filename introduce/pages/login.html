@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script
+      src="https://kit.fontawesome.com/4977da3c17.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/login.js" defer></script>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/intro_main.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <div id="header-wrapper">
+        <a href="../index.html">
+          <div id="logo">U-Zo</div>
+        </a>
+        <ul id="nav">
+          <li class="nav-item">
+            <a href="https://dev01.tistory.com/">블로그</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/u-zo">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="far fa-user"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Form section -->
+    <section>
+      <div id="body-wrapper">
+        <div class="body-item">
+          <form id="login-form" action="../index.html">
+            <div id="login-form-header">로그인</div>
+            <div id="login-form-body">
+              <div id="login-form-body-wrapper">
+                <input
+                  id="userid"
+                  name="userid"
+                  type="text"
+                  placeholder="아이디"
+                  autofocus
+                  required
+                />
+                <input
+                  id="passwd"
+                  name="passwd"
+                  type="password"
+                  placeholder="비밀번호"
+                  required
+                />
+                <p class="check_user">
+                  아이디와 비밀번호를 확인해주세요.<br />
+                  (아이디: admin, 비밀번호: admin)
+                </p>
+                <input id="submit" type="submit" value="로그인" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

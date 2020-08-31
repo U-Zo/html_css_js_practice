@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+:root {
+  --green: #32e0c3;
+  --white: #ffffff;
+  --white2: #f4f4f4;
+  --black: #222831;
+  --black2: #393e46;
+  --gray: #e5e5e5;
+  --width: 1024px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--white);
+  height: 100%;
+}
+
+header {
+  z-index: 1;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0px;
+  background-color: var(--white);
+  height: 60px;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+#header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: var(--width);
+  font-size: 1.2rem;
+}
+
+#logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header a {
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+header a:hover {
+  color: var(--green);
+}
+
+.nav-item + .nav-item {
+  padding-left: 1.5rem;
+}
+
+.nav-item i {
+  font-size: 1.5rem;
+}
+
+#body-wrapper {
+  width: var(--width);
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.body-item {
+  background-color: var(--black2);
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 10px;
+  height: 350px;
+  margin-bottom: 3rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.body-item:hover {
+  transform: translateX(-0.3rem) translateY(-0.3rem);
+  box-shadow: 0.3rem 0.3rem var(--black2);
+}
+
+.body-item-img {
+  width: 100%;
+}
+
+.body-item-footer {
+  flex-grow: 1;
+  color: var(--white);
+  vertical-align: middle;
+}
+
+footer {
+  background-color: var(--black2);
+  height: 200px;
+}

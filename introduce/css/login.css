@@ -1,0 +1,77 @@
+body {
+  background-color: var(--white2);
+}
+
+.body-item {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid var(--gray);
+}
+
+.body-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+#body-wrapper {
+  padding: 0;
+  width: 768px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+#login-form-header {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 2rem 3rem;
+}
+
+#login-form-body {
+  padding: 2rem 3rem;
+}
+
+#login-form-body-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#login-form-body-wrapper input {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--gray);
+  width: 100%;
+  background-color: var(--white);
+  transition: border-bottom 0.2s ease-in-out;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#login-form-body-wrapper input:focus {
+  border-bottom: 1px solid var(--black2);
+}
+
+#login-form-body-wrapper input + input {
+  margin-top: 2rem;
+}
+
+#login-form-body-wrapper input[type='submit'] {
+  border: 1px solid var(--gray);
+  transition: background-color 0.2s ease-in-out;
+}
+
+#login-form-body-wrapper input[type='submit']:hover {
+  background-color: var(--green);
+}
+
+.check_user {
+  display: none;
+  margin: 1rem 1rem;
+  font-size: 1.1rem;
+  color: red;
+  line-height: 2;
+}
