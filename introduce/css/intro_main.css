@@ -7,6 +7,7 @@
   --black: #222831;
   --black2: #393e46;
   --gray: #e5e5e5;
+  --gray2: #eeeeee;
   --width: 1024px;
 }
 
@@ -14,14 +15,8 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: var(--white);
-  height: 100%;
 }
 
 header {
@@ -45,6 +40,61 @@ header {
   height: 100%;
   width: var(--width);
   font-size: 1.2rem;
+}
+
+.video-wrapper {
+  height: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.video {
+  position: relative;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 120%;
+  box-sizing: border-box;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    height: 300%;
+    top: -100%;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover-text {
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.cover-text p:nth-child(3) {
+  margin-top: 3rem;
+  font-size: 2rem;
 }
 
 #logo {
@@ -75,9 +125,20 @@ header a:hover {
   font-size: 1.5rem;
 }
 
+#banner-wrapper {
+  color: var(--white);
+  height: calc(100vh - 60px);
+  background-color: var(--black);
+}
+
+#body {
+  background-color: var(--gray2);
+}
+
 #body-wrapper {
   width: var(--width);
-  margin: 3rem auto;
+  padding: 10rem 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -85,26 +146,26 @@ header a:hover {
 
 .body-item {
   background-color: var(--black2);
+  position: sticky;
+  top: 10rem;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
-  height: 350px;
-  margin-bottom: 3rem;
+  height: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
 
-.body-item:hover {
-  transform: translateX(-0.3rem) translateY(-0.3rem);
-  box-shadow: 0.3rem 0.3rem var(--black2);
+.body-item + .body-item {
+  margin-top: 8rem;
 }
 
 .body-item-img {
   width: 100%;
 }
 
-.body-item-footer {
+.body-item-content {
   flex-grow: 1;
   color: var(--white);
   vertical-align: middle;
