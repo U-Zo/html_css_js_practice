@@ -9,6 +9,8 @@
   --gray: #e5e5e5;
   --gray2: #eeeeee;
   --width: 1024px;
+  --width2: 768px;
+  --padding: 2rem;
 }
 
 * {
@@ -31,6 +33,7 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--gray);
+  line-height: 1.2;
 }
 
 #header-wrapper {
@@ -40,6 +43,7 @@ header {
   height: 100%;
   width: var(--width);
   font-size: 1.2rem;
+  padding: 0 var(--padding);
 }
 
 .video-wrapper {
@@ -137,7 +141,7 @@ header a:hover {
 
 #body-wrapper {
   width: var(--width);
-  padding: 10rem 0;
+  padding: 10rem var(--padding);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -174,4 +178,39 @@ header a:hover {
 footer {
   background-color: var(--black2);
   height: 200px;
+}
+
+@media (max-width: 1023px) {
+  #header-wrapper {
+    width: var(--width2);
+  }
+
+  #body-wrapper {
+    width: var(--width2);
+  }
+}
+
+@media (max-width: 767px) {
+  #header-wrapper {
+    width: 100%;
+  }
+
+  .cover-text {
+    padding: 0 var(--padding);
+    font-size: 2rem;
+    left: 0;
+  }
+
+  .cover-text p:nth-child(3) {
+    font-size: 1.5rem;
+  }
+
+  #body-wrapper {
+    width: 100%;
+    padding: 7rem var(--padding);
+  }
+
+  .body-item {
+    top: 7rem;
+  }
 }
