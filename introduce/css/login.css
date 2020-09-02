@@ -14,11 +14,6 @@ body {
   box-shadow: none;
 }
 
-#body-wrapper {
-  padding: 0;
-  width: 768px;
-}
-
 #login-form {
   display: flex;
   flex-direction: column;
@@ -55,7 +50,7 @@ body {
   border-bottom: 1px solid var(--black2);
 }
 
-#login-form-body-wrapper input + input {
+#login-form-body-wrapper input:not(:first-child) {
   margin-top: 2rem;
 }
 
@@ -74,4 +69,14 @@ body {
   font-size: 1.1rem;
   color: red;
   line-height: 2;
+}
+
+@media (max-width: 767px) {
+  #login-form-header {
+    font-size: 1.5rem;
+  }
+
+  #login-form-body {
+    padding: 1rem;
+  }
 }
