@@ -4,8 +4,8 @@
   --green: #32e0c3;
   --white: #ffffff;
   --white2: #f4f4f4;
-  --black: #222831;
-  --black2: #393e46;
+  --black: #000000;
+  --black2: #14171a;
   --gray: #e5e5e5;
   --gray2: #eeeeee;
   --width: 1024px;
@@ -19,20 +19,18 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--black);
 }
 
 header {
-  z-index: 1;
+  z-index: 10;
   position: sticky;
   position: -webkit-sticky;
   top: 0px;
-  background-color: var(--white);
-  height: 60px;
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid var(--gray);
   line-height: 1.2;
 }
 
@@ -40,65 +38,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+  height: 60px;
   width: var(--width);
   font-size: 1.2rem;
   padding: 0 var(--padding);
-}
-
-.video-wrapper {
-  height: 100%;
-  width: 100%;
-  min-width: 100%;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.video {
-  position: relative;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: 100%;
-  height: 120%;
-  box-sizing: border-box;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .video {
-    min-height: 300%;
-    top: -100%;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video {
-    min-width: 300%;
-    left: -100%;
-  }
-}
-
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.cover-text {
-  position: absolute;
-  top: 15rem;
-  left: 10rem;
-  font-size: 3.5rem;
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-.cover-text p:nth-child(3) {
-  margin-top: 3rem;
-  font-size: 2rem;
 }
 
 #logo {
@@ -129,14 +72,8 @@ header a:hover {
   font-size: 1.5rem;
 }
 
-#banner-wrapper {
-  color: var(--white);
-  height: calc(100vh - 60px);
-  background-color: var(--black);
-}
-
 #body {
-  background-color: var(--gray2);
+  background-color: var(--white2);
 }
 
 #body-wrapper {
@@ -156,23 +93,8 @@ header a:hover {
   flex-direction: column;
   width: 100%;
   border-radius: 10px;
-  height: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
-}
-
-.body-item + .body-item {
-  margin-top: 8rem;
-}
-
-.body-item-img {
-  width: 100%;
-}
-
-.body-item-content {
-  flex-grow: 1;
-  color: var(--white);
-  vertical-align: middle;
 }
 
 footer {
@@ -195,16 +117,6 @@ footer {
     width: 100%;
   }
 
-  .cover-text {
-    padding: 0 var(--padding);
-    font-size: 2rem;
-    left: 0;
-  }
-
-  .cover-text p:nth-child(3) {
-    font-size: 1.5rem;
-  }
-
   #body-wrapper {
     width: 100%;
     padding: 7rem var(--padding);
@@ -212,10 +124,5 @@ footer {
 
   .body-item {
     top: 7rem;
-  }
-
-  .video {
-    min-width: 450%;
-    left: -175%;
   }
 }
