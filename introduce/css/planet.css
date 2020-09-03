@@ -1,0 +1,38 @@
+#banner-wrapper {
+  height: 50vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner-img {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#body-wrapper {
+  padding: 5rem var(--padding) 10rem var(--padding);
+}
+
+.body-content {
+  color: var(--gray);
+}
+
+.content-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.content-description {
+  font-size: 1.3rem;
+}
+
+.content-description p + p {
+  margin-top: 3rem;
+}
+
+@media(max-width: 767px) {
+  .banner-img {
+    width: 100%;
+  }
+}
