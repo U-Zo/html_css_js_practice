@@ -6,6 +6,6 @@ document.querySelector('#submit').addEventListener('click', (e) => {
   if (id !== '우리은하') {
     document.querySelector('.check_user').style.display = 'block';
   } else {
-    location.href = '../index.html';
+    location.href = './pages/main.html';
   }
 });
